@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.1/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/edd4c10823.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <title>Hello, world!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crescendo Round 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+
+		<link rel="stylesheet" href="css/style.css" />
+
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZXJBVDf7R4JqmSpopVPoduIGWx1IwpBM"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+  </head>
+  <style>
+      /* Dropdown Button */
+      * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.dropbtn {
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown.show{
+    width:87.71px;
+    height: 26px;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: white;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {}
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+a:hover{
+  text-decoration: none;
+}
+
+  </style>
+  <body>
+      <!-- Section 1 -->
+      
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white">
+      
+        <h1 style="margin-left: auto; font-size: 32px; font-weight: 300; position: relative;" class="my-0 mr-md-auto font-weight-normal">E-NGO</h1>
+        <nav class="d-flex flex-row-reverse" style="margin-right: 100px; position: relative;" >
+            <!-- <a class="p-2 text-primary" style="display: inline-block;" href="#Home">Home</a>
+            <a class="p-2 text-primary" style="display: inline-block;" href="#About">About us</a>
+            <a class="p-2 text-primary" style="display: inline-block;" href="#Services">Services</a>
+            <a class="p-2 text-primary" style="display: inline-block;" href="#Portfolio">Portfolio</a>
+            <a class="p-2 text-primary" style="display: inline-block;" href="#Team">Team</a>
+            <div class="dropdown">
+              <a class="p-2 text-primary" data-toggle="dropdown">Dropdown</a>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="p-2 text-primary" style="display: inline-block;" tabindex="-1" href="#">Dropdown 1</a></li>
+                <li><a class="p-2 text-primary" style="display: inline-block;" tabindex="-1" href="#">Dropdown 2</a></li>
+                <li><a class="p-2 text-primary" style="display: inline-block;" tabindex="-1" href="#">Dropdown 3</a></li>
+              </ul>
+            </div> -->
+            <a class="p-2" style="display: inline-block;" tabindex="-1" href="#">Contact Us</a>
+            <a class="p-2" style="display: inline-block;" tabindex="-1" href="#Clients">Gallery</a>
+            <a class="p-2" style="display: inline-block;" tabindex="-1" href="#Team">Upcoming Events</a>
+            <a class="p-2" style="display: inline-block;" tabindex="-1" href="#Portfolio">Donate Now</a>
+            <a class="p-2" style="display: inline-block;" tabindex="-1" href="#Services">Join Us</a>
+            <a class="p-2" style="display: inline-block;" tabindex="-1" href="#About">About Us</a>
+            <a class="p-2" style="display: inline-block;" tabindex="-1" href="#Home">Home</a>  
+          </nav>
+      </div>
+    <!-- Optional JavaScript -->    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      
+    <!-- Section 2 -->
+        <div id="Home" class="section1">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <h1>
+                  Here at <br>
+                  <span style="color: #75b7fc;"><u>Cresendo</u></span> <br>
+                  We Provide solutions <br>
+                  for your business! <br>
+                </h1>
+      
+                <div class="buttons">
+                  <button class="b1"><b>Know about us</b></button>
+                  <button ><b>Our Services</b></button>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <center>
+                <img src="./img/intro.png" alt="">
+                </center>
+              </div>
+            </div>        
+      </div>
+
+    <!-- Section 2 Ends -->
+
+    <!-- Section 3 -->
+    <div class="section2" id="About">
+        <div class="section2-part1">
+          <h2>About Us</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="row">
+            <div class="col-md-6 col-sm-12 s2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim and minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <br />
+              <br />
+              <div class="section2-part1-contents">
+                <div>
+                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                    <div class="section2-part1-content1" style="margin-left: 20px;">
+                      <h5 style="font-weight: 700; ">Eiusmod Tempor</h5>
+                      <p style="font-size: 13px;">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                    </div>
+                </div>
+                
+                <div>
+                  <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                    <div class="section2-part1-content2" style="margin-left: 20px;">
+                      <h5 style="font-weight: 700; ">Magni Dolores</h5>
+                      <p style="font-size: 13px;">Excepteur sint occaecat cupiadatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>
+                <div>
+                  <i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i>
+                    <div class="section2-part1-content3" style="margin-left: 20px;">
+                      <h5 style="font-weight: 700; ">Dolor Sitema</h5>
+                      <p style="font-size: 13px;">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata.</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12" >
+              <center>
+              <img src="./img/about-img.svg" alt="">
+              </center>
+            </div>
+          </div>
+        </div>
+  
+        <div class="section2-part2">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="./img/about-extra-1.svg" alt="">
+            </div>
+            <div class="col-md-6" style="margin-top: 40px;">
+              <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+              <p>Ipsum in aspernatur ut possimus sint. Quis omnis est occaecati 
+                possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti
+                quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+              </p>
+              <p>Ipsum in aspernatur ut possimus sint. Quis omnis est occaecati 
+                possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti
+                quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+              </p>
+            </div>
+          </div>
+  <br />
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+              <p>Ipsum in aspernatur ut possimus sint. Quis omnis est occaecati
+                possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti
+                quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+              </p>
+              <p>Ipsum in aspernatur ut possimus sint. Quis omnis est occaecati
+                possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti
+                quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+              </p>
+              <p>Ipsum in aspernatur ut possimus sint. Quis omnis est occaecati
+                possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti
+                quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img src="./img/about-extra-2.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Section 3 Ends -->
+
+    <!-- Section 4 -->
+      <div id="Services" class="section3">
+            <h2>Services</h2>
+            <p>Laudem latina persequeris id sed, ex fabulas delectus quo. No vel partiendo 
+              abhorreant vituperatoribus.
+            </p>
+            <div class="section3-content">
+              <div class="row">
+                <div class="col-md-4 col-sm-10">
+                  <div class="section3-cards">
+                    <div>
+                      <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                      <div class="section3-cards-info" style="margin-left: 20px;">
+                        <h4>Lorem Ipsum</h5>
+                          <p>Laudem latina persequeris id sed, ex fabulas delectus quo.No vel partiendo
+                            abhorreant vituperatoribus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-10">
+                  <div class="section3-cards">
+                    <div>
+                      <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                      <div class="section3-cards-info" style="margin-left: 20px;">
+                        <h4>Lorem Ipsum</h5>
+                          <p>Laudem latina persequeris id sed, ex fabulas delectus quo.No vel partiendo
+                            abhorreant vituperatoribus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-4 col-sm-10">
+                  <div class="section3-cards">
+                    <div>
+                      <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                      <div class="section3-cards-info" style="margin-left: 20px;">
+                        <h4>Lorem Ipsum</h5>
+                          <p>Laudem latina persequeris id sed, ex fabulas delectus quo.No vel partiendo
+                            abhorreant vituperatoribus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-10">
+                  <div class="section3-cards">
+                    <div>
+                      <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                      <div class="section3-cards-info" style="margin-left: 20px;">
+                        <h4>Lorem Ipsum</h5>
+                          <p>Laudem latina persequeris id sed, ex fabulas delectus quo.No vel partiendo
+                            abhorreant vituperatoribus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-4 col-sm-10">
+                  <div class="section3-cards">
+                    <div>
+                      <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                      <div class="section3-cards-info" style="margin-left: 20px;">
+                        <h4>Lorem Ipsum</h5>
+                          <p>Laudem latina persequeris id sed, ex fabulas delectus quo.No vel partiendo
+                            abhorreant vituperatoribus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-10">
+                  <div class="section3-cards">
+                    <div>
+                      <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                      <div class="section3-cards-info" style="margin-left: 20px;">
+                        <h4>Lorem Ipsum</h5>
+                          <p>Laudem latina persequeris id sed, ex fabulas delectus quo.No vel partiendo
+                            abhorreant vituperatoribus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+              <br>
+            </div>
+            
+          </div>
+    <!-- Section 4 Ends -->
+
+    <!-- Why Choose us -->
+    <div style="height: 90vh; background-image: url('/img/intro-bg.png');" class="justify-content-center align-items-center text-center">
+        <div class="container" style="color: white; margin-bottom: 50px; ">
+        <h1>Why Choose us?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, consectetur ea commodi, architecto numquam blanditiis maiores laboriosam nemo ullam quod accusamus quis accusantium sint nobis tempora eos veritatis vero? Dolor?</p>
+    </div>
+    <div class= "container" style="color: white;" >
+        <div class="row">
+            <div class="card col" style="background-color: #1545B3;padding: 30px;">
+                
+                <i class="fas fa-gem circle-icon" style="font-size:48px;"></i>
+                <h1>Coloras Deloram</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloremque temporibus nesciunt debitis velit vitae blanditiis sed autem eum dolore, laboriosam veritatis, expedita vero dicta enim, vel magni? Reiciendis, ratione!
+            </div>
+            <div class="card col" style="background-color: #1545B3;padding: 30px;">
+                
+                <i class="fa fa-object-group" style="font-size:48px;" aria-hidden="true"></i>
+                <h1>Coloras Deloram</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloremque temporibus nesciunt debitis velit vitae blanditiis sed autem eum dolore, laboriosam veritatis, expedita vero dicta enim, vel magni? Reiciendis, ratione!
+            </div>
+            <div class="card col-3" style="background-color: #1545B3;padding: 30px;">
+                
+                <i class="fa fa-language" style="font-size: 48px;" aria-hidden="true"></i>
+                <h1>Coloras Deloram</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloremque temporibus nesciunt debitis velit vitae blanditiis sed autem eum dolore, laboriosam veritatis, expedita vero dicta enim, vel magni? Reiciendis, ratione!
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Section 5 -->
+      <div id="Portfolio" class="-content-center align-items-center text-center">
+        <h1>
+            Our Portfolio
+        </h1>
+        <div class="container">
+        <div class="row" style="flex: 33.33%" > 
+            <div class="column">
+              <img src="img/portfolio/app1.jpg" style="width: 500px;" >
+              <img src="img/portfolio/app2.jpg" style="width: 500px;">
+              <img src="img/portfolio/app3.jpg" style="width: 500px;">
+
+
+
+            </div>
+            <div class="column">
+                <img src="img/portfolio/card1.jpg" style="width: 500px;">
+                <img src="/img/portfolio/card2.jpg" style="width: 500px;">
+                <img src="img/portfolio/card3.jpg" style="width: 500px;">
+            </div>
+            <div class="column">
+                <img src="img/portfolio/web1.jpg" style="width: 500px;">
+                <img src="img/portfolio/we2.jpg" style="width: 500px;">
+                <img src="img/portfolio/web3.jpg" style="width: 500px;">
+
+            </div>            
+          </div>
+      </div>
+
+      
+      </div>
+
+    
+    <!-- Section 5 Ends -->
+
+    <!-- Section 6 -->
+  
+    <div style="margin-top: 100px;height: 70vh; background-color: #DDECED; padding: 20;">
+        <h2 style="margin-left:42%; padding: 50px;">Testimonials</h2>  
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin: 20px;">
+          <!-- Indicators -->
+          <ol class="carousel-indicators" style="margin-top: 150px; bottom: -50px;">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" style="margin: auto;">
+            <div class="item active">
+              <!-- <img src="./img/harvey.jpg" alt="Los Angeles" style="width:100%;"> -->
+              <!-- <h1>HII</h1> -->
+              <div style="margin-left: 30%;" class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box">
+                  <table>
+                    <tr>
+                      <!-- <td><div class="icon"><i class="bx bxl-dribbble"></i></div></td> -->
+                      <td style="padding-right: 50px;"><img src="./img/harvey.jpg" alt="Los Angeles" style="border-radius:50%; height: 200px;"></td>
+                      <td><h4>Lorem Ipsum</h4>
+                        <h5>CEO and Founder</h5>
+                        <i>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi Voluptatum deleniti atque corrupti
+                          quos dolores et quas molestias excepturi</i></td>
+                    <tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <!-- <img src="./img/harvey.jpg" alt="Los Angeles" style="width:100%;"> -->
+              <!-- <h1>HII</h1> -->
+              <div style="margin-left: 30%;" class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box">
+                  <table>
+                    <tr>
+                      <!-- <td><div class="icon"><i class="bx bxl-dribbble"></i></div></td> -->
+                      <td style="padding-right: 50px;"><img src="./img/rachel.jpg" alt="Los Angeles" style="border-radius:50%" height="200px"></td>
+                      <td><h4>Lorem Ipsum</h4>
+                        <h5>CEO and Founder</h5>
+                        <i  >Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi Voluptatum deleniti atque corrupti
+                          quos dolores et quas molestias excepturi</i></td>
+                    <tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <!-- <img src="./img/harvey.jpg" alt="Los Angeles" style="width:100%;"> -->
+              <!-- <h1>HII</h1> -->
+              <div style="margin-left: 30%;" class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box">
+                  <table>
+                    <tr>
+                      <!-- <td><div class="icon"><i class="bx bxl-dribbble"></i></div></td> -->
+                      <td style="padding-right: 50px;"><img src="./img/saul.jpeg" alt="Los Angeles" style="border-radius:50%" height="200px"></td>
+                      <td><h4>Lorem Ipsum</h4>
+                        <h5>CEO and Founder</h5>
+                      <i  >Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi Voluptatum deleniti atque corrupti
+                        quos dolores et quas molestias excepturi</i></td>
+                    <tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <!-- <img src="./img/harvey.jpg" alt="Los Angeles" style="width:100%;"> -->
+              <!-- <h1>HII</h1> -->
+              <div style="margin-left: 30%;" class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box">
+                  <table>
+                    <tr>
+                      <!-- <td><div class="icon"><i class="bx bxl-dribbble"></i></div></td> -->
+                      <td style="padding-right: 50px;"><img src="./img/scott.jpg" alt="Los Angeles" style="border-radius:50%" height="200px"></td>
+                      <td><h4>Lorem Ipsum</h4>
+                        <h5>CEO and Founder</h5>
+                        <i  >Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi Voluptatum deleniti atque corrupti
+                          quos dolores et quas molestias excepturi</i></td>
+                    <tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <!-- <img src="./img/harvey.jpg" alt="Los Angeles" style="width:100%;"> -->
+              <!-- <h1>HII</h1> -->
+              <div style="margin-left: 30%;" class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box">
+                  <table>
+                    <tr>
+                      <!-- <td><div class="icon"><i class="bx bxl-dribbble"></i></div></td> -->
+                      <td style="padding-right: 50px;"><img src="./img/sheldon.png" alt="Los Angeles" style="border-radius:50%" height="200px"></td>
+                      <td><h4>Lorem Ipsum</h4>
+                        <h5>CEO and Founder</h5>
+                        <i  >Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi Voluptatum deleniti atque corrupti
+                          quos dolores et quas molestias excepturi</i></td>
+                    <tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    <!-- Section 7 -->
+    <div id="Team" class="row justify-content-center align-items-center text-center" style="margin-top: 100px;height:90vh; margin-bottom: 100px;">
+        
+        <div class="container">
+            <h1>
+                Team
+            </h1>
+            <p style="margin-bottom: 50px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi corrupti debitis autem obcaecati distinctio saepe fuga dicta repellat quas error ex, doloremque itaque? Alias totam, nesciunt dolorem doloremque nobis cum!
+            </p>
+            <img src="./img/scott.jpg" style="border-radius: 50%;" class="col-2" alt="">
+                
+            <img src="./img/walterwhite.jpg" style="border-radius: 50%;" class="col-2" alt="">
+            <img src="img/tyrion.jpg" alt="" style="border-radius: 50%;" class="col-2">
+            <img src="img/sheldon.png" style="border-radius: 50%;" class="col-2">
+        </div>
+        <div class="container" style="margin-top: 20px;">
+            <img src="./img/elliot.png" style="border-radius: 50%;" class="col-2" alt="">
+            <img src="./img/snoop.jpeg" style="border-radius: 50%;" class="col-2" alt="">
+            <img src="img/rachel.jpg" alt="" style="border-radius: 50%;" class="col-2">
+            <img src="img/holt.jpg" style="border-radius: 50%;" class="col-2">
+        </div>
+        
+
+      </div>
+    <!-- Section 7 Ends -->
+
+    <!-- Section 8 -->
+    <div id="Clients" class="row justify-content-center align-items-center text-center" style="margin-top: 100px; background-color: #ECF4FF; height: 100vh;">
+        
+        <div class="container">
+            <h1>
+                Our Clients
+            </h1>
+            <p style="margin-bottom: 50px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi corrupti debitis autem obcaecati distinctio saepe fuga dicta repellat quas error ex, doloremque itaque? Alias totam, nesciunt dolorem doloremque nobis cum!
+            </p>
+            <img src="./img/dunder.png"  class="col-2" alt="">
+                
+            <img src="./img/los.png"  class="col-2" alt="">
+            <img src="img/wonka.png" alt=""  class="col-2">
+            <img src="img/stark.png"  class="col-2">
+        </div>
+        <div class="container">
+            <img src="./img/wayne.png"  class="col-2" alt="">
+            <img src="./img/krusty.png"  class="col-2" alt="">
+            <img src="img/shield.png" alt="" class="col-2">
+            <img src="img/capsule.png" class="col-2">
+        </div>
+        
+
+      </div>
+
+    <!-- Section 8 Ends -->
+
+    <footer class="bg-dark  text-white" style="height: 50vh; background-image: url('/img/intro-bg.png'); padding: 50px;">
+        <!-- Grid container -->
+        
+          <!-- Section: Links -->
+          <section class="container" >
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0 justify-content-left">
+                <h1 class="text-uppercase">Crescendo</h1>
+                <p class="justify-content-left">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora animi accusamus repellat officia. Saepe provident ducimus minus in numquam ipsa illum expedita rem, recusandae voluptatem error reiciendis adipisci molestias sequi?
+                </p>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Useful Links</h5>
+      
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#!" class="text-white">Home</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">About Us</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Services</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Terms of Services</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Privacy Policy</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Contact Us</h5>
+      
+                <ul class="list-unstyled mb-0">
+                  <li>
+                      Bandstand
+                  </li>
+                  <li>
+                      Near Mannat
+                  </li>
+                  <li>
+                      United States lol Chutiya
+                  </li>
+                  <li>
+                      <b>Phone: </b>
+ +91-6969696969                 </li>
+
+                <li>
+                    <b>
+                        Email:
+                    </b>
+                    Crescendo@gmail.com
+                </li>
+                </ul>
+
+                <section class="mb-6" style="margin-top: 30px;" >
+                    <!-- Facebook -->
+                    <a style="margin-right: 20px;" href="#!" role="button"
+                      ><i class="fab fa-facebook-f circle-icon"></i
+                    ></a>
+              
+                    <!-- Twitter -->
+                    <a style="margin-right: 20px;" href="#!" role="button"
+                      ><i class="fab fa-twitter circle-icon"></i
+                    ></a>
+              
+                    <!-- Google -->
+                    <a style="margin-right: 20px;" href="#!" role="button"
+                      ><i class="fab fa-google circle-icon"></i
+                    ></a>
+              
+                    <!-- Instagram -->
+                    <a style="margin-right: 20px;" href="#!" role="button"
+                      ><i class="fab fa-instagram circle-icon"></i
+                    ></a>
+              
+                    <!-- Linkedin -->
+                    <a style="margin-right: 20px;" href="#!" role="button"
+                      ><i class="fab fa-linkedin-in circle-icon"></i
+                    ></a>
+                  </section>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Our Newsletter</h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptas dolorum earum consectetur tenetur tempore expedita, nisi ut iste eum, quibusdam delectus eius sit error facilis rerum ea atque! Id.
+                </p>
+                <section class="">
+                    <form action="">
+                        <input class="inline-block"type="text">
+                        <button type="submit" class="btn btn-outline-light">
+                            Subscribe
+                          </button>
+                      <!--Grid row-->
+                    </form>
+                  </section>
+              </section>
+              </div>
+              <!--Grid column-->
+              
+            </div>
+            <!--Grid row-->
+
+
+          <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); margin-bottom: 0; margin-top: 30px;">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+          $('.dropdown-submenu a.test').on("click", function(e){
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+          });
+        });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+</html>
